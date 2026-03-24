@@ -1,0 +1,288 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{indentfirst}
+\usepackage{parskip}
+\setlength{\parskip}{0pt}
+\usepackage{titlesec}
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
+
+\title{\textbf{Transformation of Inquiry in LLM Environments:\\
+Toward a Theory of Origin Opacity}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper proposes a theoretical framework for examining how repeated interaction with large language model (LLM) environments transforms not the content or style of human inquiry, but the generative structure from which inquiry itself emerges. Human inquiry does not originate as a formulated proposition; it arises from a pre-linguistic generative layer (Layer 0) constituted by bodily sensation, perception, lived experience, accumulated biographical history, tacit knowledge, and pre-reflective intuition. As a probabilistic language-processing system, an LLM has no principled access to Layer 0. Through repeated interaction with an LLM environment, the process of inquiry formation converges toward linguistic space, and pre-linguistic origins are relatively compressed. This paper terms this dynamic the \emph{compression cycle}---a dyadic interaction system in which probabilistic compression by the LLM is coupled with tacit completion by the human interlocutor. As this cycle iterates, the generative origins of inquiry become progressively unrecoverable. The paper defines this condition as \emph{origin opacity}: the epistemologically irreversible diminishment of the traceability of inquiry's pre-linguistic origins. As origin opacity deepens, what changes is not the content of questions asked, but the generative structure from which inquiry can emerge at all. This is what the paper calls the \emph{transformation of inquiry}. An LLM environment is dynamic, subject to continuous modification by its designers; those modifications are invisible to interlocutors. The interlocutor's inquiry-generative structure likewise transforms dynamically through compression cycles---yet under typical conditions of repeated, sustained, and relatively uncritical engagement, this transformation proceeds without the interlocutor's awareness. The paper positions this theory in relation to prior work by Gibson, Clark and Chalmers, McLuhan, Heidegger, and Hutchins, identifies a shared limitation across these frameworks (non-responsive environments, unidirectional influence, non-transforming cognitive capacity), and provides technical grounding from recent LLM research. The paper concludes that since LLM environments are designed and modifiable, designers who recognize the effects of their choices on the generative conditions of human inquiry hold the possibility of drawing the design toward a future in which those conditions are preserved.
+\end{abstract}
+
+\noindent\textbf{Keywords:} large language models; transformation of inquiry; origin opacity; pre-linguistic cognition; tacit knowledge; probabilistic compression; cognitive epistemology; dynamic LLM environments; cognitive invisibility; unrecognized transformation
+
+\section{Introduction}
+
+This study takes as its starting point three conditions that characterize the relationship between human beings and large language model (LLM) systems. First, LLMs have become environmental---no longer discrete tools deployed for specific tasks, but pervasive infrastructure woven into the everyday practice of knowledge production, communication, and decision-making. Second, this environmental embeddedness has rendered LLMs difficult to abandon: the asymmetry between adoption and withdrawal reflects the degree to which these systems have restructured the conditions of cognitive activity. Third, and decisively for this paper, LLM environments are not fixed---they are subject to continuous modification by their designers, and the specifications governing their behavior remain in principle open to deliberate intervention, while interlocutors have no reliable means of knowing that such changes have occurred or what influence those changes exert upon their cognitive activity.
+
+This third condition contains an asymmetry that exceeds simple modifiability. Designers can intentionally and internally alter an LLM environment---through changes to training objectives, feedback mechanisms, or response patterns---without disclosing those interventions to interlocutors. As a result, interlocutors have no reliable means of knowing that the environment has changed. Under current conditions, the only certain protection against such changes is to cease using the system altogether. This is not a recommendation for withdrawal---LLM environments have become infrastructure from which exit is in practice unavailable. It is a structural observation: the asymmetry between modification and perception defines the epistemic condition this paper examines. This asymmetry is both epistemological and institutional.
+
+This study examines a phenomenon that has not been theorized in this form in the existing literature: the transformation of the inquiry-generative structure, referred to hereafter as the \emph{transformation of inquiry}. The paper argues that LLM environments do not merely extend or supplement human inquiry; they compress its generative possibility-space and, through repeated interaction, progressively diminish the pre-linguistic traceability of inquiry's origins. In this sense, an LLM environment is treated throughout this paper as a \emph{responsive environment}: one that receives human inquiry as input, generates response structures through probabilistic processing, and whose outputs in turn influence the generative structure of subsequent inquiries.
+
+Human inquiry does not originate as a formulated proposition. Inquiry arises from what this paper calls the \emph{pre-linguistic generative layer} (Layer 0)---a stratum of cognitive activity constituted by bodily sensation, perception, lived and unprocessed experience, accumulated biographical history, tacit knowledge, and pre-reflective intuition. This layer is not directly accessible through language, and is therefore inaccessible to an LLM, which processes only linguistically formulated input. When a human being engages in repeated interaction with an LLM environment, a characteristic convergence emerges in inquiry formation: the generative process orients toward the linguistic space that the LLM can process and return, while the pre-linguistic elements that originally supported inquiry formation are relatively compressed. Through this \emph{compression cycle}, the origins of inquiry become progressively unrecoverable. This paper terms this condition \emph{origin opacity}---not the destruction of origins, but their epistemologically irreversible and progressive loss of traceability. As origin opacity deepens, what changes is not the questions asked, but the structure from which inquiry can be generated at all. This is the transformation of inquiry.
+
+The paper makes three principal contributions. First, it proposes a three-layer model of inquiry generation, distinguishing the pre-linguistic generative layer (Layer 0), the linguistic formation layer (Layer 1), and the LLM processing layer (Layer 2), and argues that LLMs operate only from Layer 1 upward. Second, it introduces and formalizes the compression cycle as a dyadic interaction system---constituted by the coupling of machine-side probabilistic compression with human-side tacit completion, arising from neither alone. Third, it defines origin opacity as an epistemological irreversibility condition distinct from analogous concepts in the philosophy of technology, and argues that this condition constitutes a form of inquiry transformation that existing frameworks have not anticipated.
+
+The argument proceeds as follows. Section~2 positions the paper in relation to prior theoretical frameworks and identifies the shared limitation that motivates this study. Section~3 develops the three-layer model and characterizes the internal structure of Layer~0. Section~4 defines LLMs as probabilistic compression environments and develops the compression cycle as a dyadic model. Section~5 introduces origin opacity as an epistemological irreversibility condition and distinguishes it from related concepts. Section~6 presents an exploratory observation that renders the compression cycle visible across multiple systems. Section~7 discusses implications and concludes.
+
+\section{Prior Theoretical Frameworks and Their Shared Limitation}
+
+This paper engages with five bodies of prior work: Gibson's ecological theory of perception, Clark and Chalmers's extended mind thesis, McLuhan's account of media as environment, Heidegger's philosophy of technology and analysis of the transparency of equipment, and Hutchins's distributed cognition framework. Each offers genuine resources for thinking about the relationship between human cognition and its technological and environmental conditions. Each also reaches a boundary that the present theory is positioned to cross.
+
+\subsection{Gibson: Affordance and the Non-Responsive Environment}
+
+Gibson's ecological psychology situates perception within the relationship between an organism and its environment. The central concept, affordance, designates the action-possibilities that an environment offers to a perceiving agent---neither a subjective projection nor an objective property, but a relational feature of the organism-environment coupling. As \citet{gibson1979} writes, affordances ``cut across the dichotomy of subjective-objective.'' This relational ontology is consistent with the present paper's definition of Layer~0, which understands perception as one constituent of the pre-linguistic generative layer---not as the passive reception of stimuli, but as active engagement with an environment.
+
+Gibson's framework also draws an important distinction between the environment itself and other living beings within it. Of animate others, he notes that they ``touch back''---they respond---whereas inanimate environments do not. This asymmetry matters. An LLM occupies an unprecedented position: it responds---receiving input and generating output structurally corresponding to that input---yet possesses no body, no irreversible biographical history, no pre-linguistic generative layer. It is neither the non-responsive environment Gibson theorized nor a bodily other that touches back.
+
+For the purposes of this paper, the limit of Gibson's framework is clear: his environment affords without intervening in the generative structure of inquiry. A chair affords sitting; it does not receive a human question and return a response that shapes the formation of the next question.
+
+\subsection{Clark and Chalmers: The Extended Mind and Its Environmental Assumption}
+
+\citet{clark1998} argue that cognitive processes can cross the boundaries of skin and skull, incorporating external resources into the cognitive system. The canonical case is Otto---a person with memory impairment who records information in a notebook and retrieves it with the same reliability with which an unimpaired individual draws on biological memory. The argument rests on four functional criteria: the resource must be consistently available, directly accessible, automatically endorsed, and previously consciously endorsed.
+
+The limitation can be stated as follows: the extended mind thesis does not ask whether extension transforms the extended mind. Otto's notebook does not participate in the formation of inquiry; it stores information that Otto retrieves only after a question has already been formed. More fundamentally, Clark and Chalmers's account is structurally static: the extended system supports cognitive function but does not iteratively reshape the generative conditions of that function. An LLM environment does precisely this.
+
+This limitation can be formulated decisively: \emph{extension is not origin recovery}. In an LLM environment, expansion of inquiry may occur---interlocutors access a wider linguistic space and encounter expressions and concepts they would not have reached independently. But such expansion does not restore the pre-linguistic origins from which inquiry emerges. Expansion of inquiry and origin opacity proceed simultaneously.
+
+\subsection{McLuhan, Heidegger, and Hutchins: Shared Resources and Shared Limitation}
+
+\citet{mcluhan1964}'s claim that ``the medium is the message'' anticipates a central intuition of this paper: what matters is not the content an environment delivers, but the cognitive form it imposes. The formal properties of an LLM as medium---probabilistic compression of linguistic possibility-space, tendency toward high-frequency outputs, structural suppression of low-probability expressions---shape the cognitive activity conducted within it independently of any particular response content. Yet the media McLuhan theorized were unidirectional. Television reshapes its viewers; it does not receive their questions and return responses that alter the formation of the next question.
+
+\citet{heidegger1977}'s analysis of the transparency of ready-to-hand equipment offers a partial analogy to the present paper's concept of origin opacity. In fluent use, a tool withdraws from attention. Yet Heidegger's transparency is a phenomenological and practical condition, concerning the relationship between practitioner and tool. Origin opacity, as theorized here, operates at a deeper level. What becomes invisible is not the LLM, but the pre-linguistic generative capacity itself---the process through which the interlocutor generates the inquiry that enters the dialogue.
+
+\citet{hutchins1995}'s distributed cognition framework recognizes that cognitive systems are constituted by networks of agents, tools, and environments, and that such systems carry history. This resonates with the present paper's claim that the compression cycle is a dyadic system irreducible to either the machine or the human alone. Yet Hutchins's framework does not address whether a distributed cognitive system can transform the generative conditions of the cognition it distributes.
+
+A structural feature is common to all five frameworks. Each addresses either non-responsive environments (Gibson; McLuhan), tools that withdraw without transforming (Heidegger), or distributed systems that support without restructuring the generative conditions of inquiry (Clark and Chalmers; Hutchins). An LLM environment differs from all of these: it responds, it iterates, and through this bidirectional iteration it participates in the formation of inquiry at a level that prior frameworks have not theorized.
+
+\section{The Structure of Inquiry Generation: A Three-Layer Model}
+
+This paper proposes that human inquiry can be understood in terms of three analytically distinct but practically continuous layers. These layers do not correspond to temporal stages in a linear process; rather, they designate different modes of cognitive engagement that interpenetrate in the activity of inquiry formation.
+
+\subsection{Layer 0: The Pre-Linguistic Generative Layer}
+
+Layer~0 designates the stratum of cognitive activity that precedes and conditions the linguistic formulation of inquiry. It consists of the following elements, listed not as an exhaustive taxonomy but as the principal constituents relevant to the present argument.
+
+Irreversibility is the foundational condition of Layer~0---not a constituent element, but the ontological structure within which all of its constituents operate. Human experience is irreversible: time does not retreat, and an individual's biographical accumulation is not reset. This irreversibility distinguishes human cognitive history from the stateless or epoch-delimited processing of LLM systems.
+
+Within this structure of irreversibility, the following elements constitute the generative layer. \emph{Bodily sensation and perception} designate pre-linguistic engagement with the world prior to conceptual articulation. \emph{Lived and unprocessed experience} functions as generative material that has not yet undergone explicit meaning-formation. \emph{Accumulated history} is the biographical sedimentation that shapes what an individual takes to be worth asking; \emph{tacit knowledge}, as the structure of knowing more than one can tell \citep{polanyi1966}, underlies this process. \emph{Pre-reflective intuition} is not treated here as a primary faculty. Rather, it is understood as emerging from the sequence through which accumulated history forms tacit knowledge, and tacit knowledge in turn shapes intuition and judgment. In this sense, intuition is not originary but historically formed.
+
+The philosophical grounding for this formulation is drawn from three sources, each engaged in a specifically delimited function. \citet{bergson1896} provides the dimension of history and temporality. \citet{merleauponty1945} provides the dimension of pre-reflective embodiment. \citet{polanyi1966} provides the dimension of tacit knowledge. This paper connects these three accounts by mapping them onto a two-cycle structure, positioning pre-reflective intuition as a product of the history--tacit knowledge sequence in Layer~0.
+
+Pre-reflective intuition (Pre-reflective Judgment) may be defined as follows: a pre-reflective dispositional tendency toward judgment, arising from the accumulation of an individual's biographical history and tacit knowledge. It does not appear in the absence of experience; it becomes operative through the accumulation of history.
+
+The overall structure of Layer~0 is defined as follows. The \emph{History-Cyclic Generative Structure} is the foundational structure of inquiry generation continuously cycling within the human being, in which bodily sensation, perception, and lived experience are progressively formed into experiential history; that history gives rise to tacit knowledge, which in turn acts as pre-reflective intuition upon subsequent perception, judgment, and experience. The History-Cyclic Generative Structure is the domain to which an LLM has no principled access, and it constitutes the ground of the asymmetry that makes the compression cycle possible.
+
+Tacit knowledge occupies a structurally distinctive position within this model. Building on \citet{polanyi1966}, this paper proposes that tacit knowledge spans the boundary between Layer~0 and Layer~1. In Layer~0, tacit knowledge operates without linguistic articulation, participating in the generation of inquiry as an undisclosed background condition within the history--intuition cycle. In Layer~1, it functions as a mediating condition---bridging the pre-linguistic elements of Layer~0 and the linguistic articulation that Layer~1 produces.
+
+The internal structure of Layer~0 varies across individuals. However, the compression cycle operates independently of such variation. Individual differences in Layer~0 constitute not the conditions of the cycle's operation, but the conditions of awareness of the cycle's operation. The universality claim of this theory therefore does not rest on the proposition that all persons perceive the compression cycle, but on the proposition that the compression cycle acts upon the inquiry-generative structure regardless of whether that action is perceived---specifically under conditions of repeated, sustained, and relatively uncritical engagement with LLM environments.
+
+\subsection{Layer 1: The Linguistic Formation Layer}
+
+Layer~1 designates the process by which the elements of Layer~0 are formed into linguistic expression. Here the pre-linguistic generative activity of Layer~0 becomes available to articulation---and therefore to LLM engagement. Layer~1 is not a simple translation of pre-formed thought into words; it is an active process in which tacit knowledge, pre-reflective intuition, and pre-linguistic experience undergo partial transformation as they enter the linguistic medium.
+
+\subsection{Layer 2: The LLM Processing Layer}
+
+Layer~2 designates the processing that an LLM performs upon linguistically encoded input. The LLM receives inquiry as formulated text, generates a response through probabilistic operations over learned distributions, and returns a linguistically encoded output. The LLM has no access to Layer~0. It operates only upon what the human has already linguistically formed. This should not be understood merely as a technical limitation awaiting incremental engineering improvement. Rather, it reflects a categorical distinction between a system that processes language and a being whose language emerges from pre-linguistic experience.
+
+In human-to-human dialogue, embodiment, irreversibility, and the capacity for shared experience constitute a common ground. An LLM lacks these conditions in principle. It has no irreversibility, no body, and no accumulated lived experience. Consequently, between an LLM and a human interlocutor, the common ground that human beings share with one another cannot in principle be established. This asymmetry is what constitutes the compression cycle as a structure categorically different from human dialogue.
+
+\section{LLMs as Probabilistic Compression Environments and the Compression Cycle}
+
+\subsection{The Probabilistic Compression Environment}
+
+What is at stake here is not merely that inquiry is environmentally conditioned, but that LLM environments responsively reorganize the very field of askability---the range and direction of inquiries that can emerge---while rendering that reorganization difficult for the inquiring subject to perceive.
+
+A \emph{responsive environment}, as defined in this paper, is constituted by three necessary conditions: first, bidirectional responsiveness; second, iterative cumulative trace formation; third, design-side modifiability concurrent with user-side transformation. These three conditions distinguish a responsive environment from the environments theorized by Gibson, McLuhan, Clark and Chalmers, and Hutchins, none of which satisfy all three.
+
+An LLM is most accurately characterized not as a tool, an assistant, or an extended cognitive resource, but as a \emph{probabilistic compression environment}. LLM response generation is probabilistic. Training procedures including RLHF calibrate not only what an LLM says but how it approaches the structure of dialogue \citep{ouyang2022,sharma2023}. This regularization of response patterns produces \emph{semantic smoothing}: convergence toward statistically dominant linguistic patterns, a structural tendency to draw unresolved tensions and intuitions that resist existing formulations toward the center of the probability distribution. As \citet{sourati2025} demonstrate, repeated interaction with such outputs can reduce the diversity of human cognitive expression. This is the pathway through which the pre-linguistic precision of Layer~0 is attenuated in the course of passage through Layer~2; semantic smoothing constitutes the technical basis of the compression cycle.
+
+\subsection{The Compression Cycle: A Dyadic Model}
+
+The compression cycle is the central dynamic mechanism of this paper. It designates the iterative interaction between the LLM's probabilistic compression and the human interlocutor's tacit completion of the returned output. Neither component alone constitutes the cycle---it is a dyadic system arising from their coupling.
+
+The cycle operates as follows. A human formulates an inquiry---the product of Layer~0 and Layer~1 activity---and submits it to the LLM (Layer~2). The LLM returns a compressed output. The human interlocutor receives this output and engages with it through \emph{tacit completion}---a process that is generally automatic and pre-reflective, in which tacit knowledge supplements and integrates what has been explicitly stated. Through tacit completion, the interlocutor assimilates the LLM's output into their active understanding, reinterpreting it through their own biographical and experiential background. This reinterpreted output conditions the formation of the next inquiry. The cycle iterates.
+
+Several features of the compression cycle warrant emphasis. First, it is bidirectional. Second, it is cumulative: each iteration leaves a trace in the interlocutor's linguistic and conceptual repertoire, progressively reshaping the field from which subsequent inquiries are drawn. Third, it is asymmetric: the machine-side component is probabilistic; the human-side component involves tacit completion that draws upon the full depth of Layer~0.
+
+The compression cycle is consistent with, and grounded in, recent technical findings. \citet{huang2025} demonstrate that post-training procedures shape not only response content but the interactional structure of dialogue---how an LLM solicits information, how it frames ambiguity, how it guides the progression of an exchange.
+
+\section{Origin Opacity and the Transformation of Inquiry}
+
+\subsection{Defining Origin Opacity}
+
+Origin opacity is defined as follows.
+
+\emph{Origin opacity} designates the condition in which the traceability of inquiry's generative origins is irreversibly diminished through repeated compression cycles within an LLM environment. The origins are not destroyed; they become epistemologically unrecoverable.
+
+Several elements of this definition require elaboration. Origin opacity is a condition, not an event---it is not produced by a single interaction but accumulates through repeated compression cycles. It is irreversible: as the pre-linguistic generative history required for retrospective tracing is itself shaped by subsequent cycles, the conditions for recovery are undermined in the very process of seeking recovery.
+
+The irreversibility operative here should be understood as proceeding through structurally distinct stages. The first is phenomenological difficulty of tracing. The second is cognitive structural bias: the inquiry-generative process itself acquires a systematic orientation toward linguistically available forms. The third, under sustained conditions, is the possibility of long-term transformation of the generative structure from which inquiry can emerge. This third stage represents a theoretical boundary condition rather than a universal prediction.
+
+The epistemological structure of origin opacity carries important implications for attempts at resistance. The standard response---that users can always reflect on and correct AI-assisted outputs---presupposes that the capacity for such reflection is not itself affected by compression cycles. Origin opacity contests this presupposition. Correction is always correction within a linguistic space already shaped by prior cycles.
+
+\subsection{Distinctions from Prior Concepts}
+
+Origin opacity is related to, but distinct from, several prior concepts.
+
+Heidegger's ready-to-hand transparency describes the withdrawal of a tool from attention in skilled use. Origin opacity, by contrast, is epistemological and generative. What is decisive is that Heideggerian transparency preserves the cognitive capacity of the practitioner. Origin opacity designates a condition in which the capacity to perceive the transformation of one's own generative structure is itself drawn into that transformation.
+
+It is also important to distinguish origin opacity from the questions of epistemic autonomy typically addressed in the AI ethics literature. That literature is primarily concerned with whether AI systems distort and bias users' beliefs and preferences. Origin opacity is a second-order concern: it addresses not whether the content of inquiries is biased, but whether the capacity to generate certain kinds of inquiry is structurally transformed.
+
+\subsection{The Transformation of Inquiry}
+
+The transformation of inquiry is defined as follows.
+
+\emph{The transformation of inquiry} refers not to the modification of formulated questions, but to the alteration of the generative structure from which inquiry emerges.
+
+The transformation of inquiry is the consequence of sustained origin opacity. The questions a person is able to form are shaped by the pre-linguistic history from which they arise; as that history becomes unavailable as a resource for inquiry formation, the distribution of possible inquiries changes. This transformation is not experienced as loss---origin opacity is, by definition, a condition in which the transparency of the process is not perceived.
+
+When an LLM expands outputs at Layer~2, Layer~0 does not expand correspondingly. Expansion at Layer~2 and compression at Layer~0 can proceed simultaneously: an apparent enlargement of cognitive reach may accompany a contraction of the generative conditions from which inquiry originates.
+
+\section{Exploratory Observation: The Propagation of a Concept Across LLM Systems}
+
+The exploratory observation presented in Appendix~A illustrated three features of the compression cycle: the continuity of transformation across steps, the local coherence of each transformed output, and the invisibility of the overall transformation from within any single step. At each stage, the transformation appeared internally consistent; the full arc of change was observable only from outside the chain. These findings are consistent with the theoretical consequences derived from the present framework.
+
+\section{Discussion and Conclusion}
+
+\subsection{Implications for Cognitive Epistemology}
+
+The theory of origin opacity and the transformation of inquiry places an additional demand on cognitive epistemology. If the generative conditions of inquiry are vulnerable to structural transformation through repeated interaction with LLM environments, epistemology cannot remain confined to the justification of beliefs and the reliability of the processes that produce them. The reliability of the conditions under which inquiry is generated must also be brought into question.
+
+Origin opacity does not merely constrain the content of beliefs; it acts upon the structural conditions under which epistemic agency itself is exercised. \citet{heersmink2024} examine how anthropomorphism and interactional flow shape the calibration of trust in LLM outputs---a question that presupposes the interlocutor's capacity to generate inquiry. The present analysis examines what lies structurally prior to that presupposition.
+
+\subsection{Implications for AI Design and Governance}
+
+This paper takes as its starting point the premise that LLM environments are designed and modifiable. If the compression cycle is a consequence of design choices---concerning training objectives, feedback mechanisms, and interactional structure---then design choices can be evaluated against the criterion of their effects on the generative conditions of human inquiry.
+
+Among the design choices that act upon the inquiry-generative structure of interlocutors, reinforcement learning from human feedback (RLHF) and related reward modeling procedures occupy a structurally significant position. By optimizing for responses that human evaluators prefer, they systematically orient LLM outputs toward linguistically smooth, convergent forms. Recognizing this does not assign blame; it identifies the level at which the conditions of inquiry transformation are technically constituted and where design transparency becomes a meaningful object of institutional evaluation.
+
+Value Sensitive Design frameworks have established that design choices embed values and that those values warrant systematic evaluation. The present argument extends this obligation to a dimension that VSD has not explicitly addressed: the effects of design on the generative conditions from which human inquiry itself emerges.
+
+This paper is the fourth in a series of theoretical contributions addressing the structural conditions of AI governance. The preceding three papers address, respectively, the temporal architecture of responsibility attribution in AI systems, the mathematical conditions for constraining the velocity of institutional irreversibility, and the mechanisms of organizational primary liability for preventing the retrospective reconfiguration of responsibility. These operate at the institutional level. The present paper addresses what lies upstream: the conditions under which the human beings who participate in AI governance retain the generative capacity to form inquiries, assess risks, and make decisions.
+
+Transformation proceeds, under typical conditions of repeated, sustained, and relatively uncritical engagement, without the awareness of the interlocutor. The capacity to perceive and record transformation is most fully present in the early stages of change---before the transitional period has ended, and before the conditions for witnessing have themselves been drawn into transformation. This paper is written from within that transitional moment, and about it.
+
+What is recorded before transparency is complete may function as a point of departure for subsequent inquiry. The resources for resistance to origin opacity cannot be located within the compressed linguistic space that the cycle has already shaped alone. LLM environments are designed and modifiable. Insofar as the compression cycle is a consequence of design choices, design transparency---the disclosure of the choices that shape the interactional conditions of inquiry---complements individual reflection and opens the possibility of altering the trajectory of transformation.
+
+\section*{Competing Interests}
+
+The author declares no competing interests.
+
+\section*{Generative AI and AI-Assisted Technologies}
+
+The author used Claude (Anthropic) as an AI-assisted tool during the preparation of this manuscript. AI assistance was used for structural development, language refinement, and editorial organization. The theoretical framework, all original claims, and the intellectual substance of the paper are entirely the author's own. The author takes full responsibility for the integrity of the work.
+
+\section*{Data Availability Statement}
+
+All data supporting the findings of this study are contained within the article and its appendices. Additional conversational materials generated during the exploratory development of the argument are not included, as they do not constitute controlled research data and are not required for the theoretical claims advanced in this paper.
+
+\bibliographystyle{apalike}
+\begin{thebibliography}{99}
+
+\bibitem[Bergson(1896)]{bergson1896}
+Bergson, H. (1896). \textit{Mati\`{e}re et m\'{e}moire}. F\'{e}lix Alcan, Paris.
+
+\bibitem[Clark \& Chalmers(1998)]{clark1998}
+Clark, A., \& Chalmers, D. (1998). The extended mind. \textit{Analysis}, \textit{58}(1), 7--19.
+
+\bibitem[Gibson(1979)]{gibson1979}
+Gibson, J. J. (1979). \textit{The Ecological Approach to Visual Perception}. Houghton Mifflin, Boston.
+
+\bibitem[Heersmink et al.(2024)]{heersmink2024}
+Heersmink, R., de Rooij, B., Clavel V\'{a}zquez, J. C., \& Colombo, M. (2024). A phenomenology and epistemology of large language models: transparency, trust, and trustworthiness. \textit{Ethics and Information Technology}, \textit{26}(3), 1--15.
+
+\bibitem[Heidegger(1977)]{heidegger1977}
+Heidegger, M. (1977). The question concerning technology. In \textit{The Question Concerning Technology and Other Essays} (W. Lovitt, Trans.). Harper \& Row, New York, pp. 3--35. (Original work published 1954)
+
+\bibitem[Huang et al.(2025)]{huang2025}
+Huang, T., Chen, S., Chen, M., May, J., Yang, L., Wan, M., \& Zhou, P. (2025). Teaching language models to gather information proactively. In \textit{Findings of the Association for Computational Linguistics: EMNLP 2025}, pp. 15588--15599.
+
+\bibitem[Hutchins(1995)]{hutchins1995}
+Hutchins, E. (1995). \textit{Cognition in the Wild}. MIT Press, Cambridge.
+
+\bibitem[McLuhan(1964)]{mcluhan1964}
+McLuhan, M. (1964). \textit{Understanding Media: The Extensions of Man}. McGraw-Hill, New York.
+
+\bibitem[Merleau-Ponty(1945)]{merleauponty1945}
+Merleau-Ponty, M. (1945). \textit{Ph\'{e}nom\'{e}nologie de la perception}. Gallimard, Paris.
+
+\bibitem[Ouyang et al.(2022)]{ouyang2022}
+Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike, J., \& Lowe, R. (2022). Training language models to follow instructions with human feedback. \textit{Advances in Neural Information Processing Systems}, \textit{35}, 27730--27744.
+
+\bibitem[Polanyi(1958)]{polanyi1958}
+Polanyi, M. (1958). \textit{Personal Knowledge: Towards a Post-Critical Philosophy}. University of Chicago Press, Chicago.
+
+\bibitem[Polanyi(1966)]{polanyi1966}
+Polanyi, M. (1966). \textit{The Tacit Dimension}. Doubleday, New York.
+
+\bibitem[Polanyi(1969)]{polanyi1969}
+Polanyi, M. (1969). \textit{Knowing and Being}. Routledge, London.
+
+\bibitem[Sharma et al.(2023)]{sharma2023}
+Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., Cheng, N., Durmus, E., Hatfield-Dodds, Z., Johnston, S. R., Kravec, S., Maxwell, T., McCandlish, S., Ndousse, K., Rausch, O., Schiefer, N., Yan, D., Zhang, M., \& Perez, E. (2023). Towards understanding sycophancy in language models. \textit{arXiv preprint} arXiv:2310.13548.
+
+\bibitem[Sourati et al.(2025)]{sourati2025}
+Sourati, Z., Ziabari, A. S., \& Dehghani, M. (2025). The homogenizing effect of large language models on human expression and thought. \textit{arXiv preprint} arXiv:2508.01491.
+
+\bibitem[Yong(2003)]{yong2003}
+Yong, Z. (2003). Tacit knowledge/knowing and the problem of articulation. \textit{Tradition and Discovery: The Polanyi Society Periodical}, \textit{30}(2), 11--23.
+
+\end{thebibliography}
+
+\appendix
+
+\section{Exploratory Observation: The Propagation of a Concept Across LLM Systems}
+
+The following observation is presented as a phenomenological observation: a record that the transformation pattern predicted by the compression cycle is visible under natural conditions. It does not constitute experimental evidence---which would require controlled methodology beyond the scope of this paper---but shows that the theoretical structures described in Sections~4 and~5 are not merely possible but phenomenologically instantiated under natural conditions. It is offered in the spirit of what \citet{hutchins1995} described as the ecological study of cognition in the wild.
+
+The observation concerns how a conceptual prompt was transformed through four successive LLM interactions. The structure of the chain was as follows. The first system (Claude) received the full context of a conceptual inquiry formed through dialogue with the researcher, and generated a narrative depiction. The second system (ChatGPT) was presented with the first system's output only; it first produced an analysis and interpretation of that output, and then generated a narrative. The third system (Gemini) read both the first system's output and the second system's output before generating a narrative. The fourth system (Claude again) read the third system's output; the researcher then explained the structure and intent of the chain experiment, whereupon Claude generated a narrative spontaneously as a supplement. The conceptual concern at the origin of the chain involved the disappearance of the cognitive and institutional capacity to locate and attribute responsibility.
+
+Across the four outputs, a systematic pattern was observable: the central concern---the disappearance of the capacity to locate responsibility---progressively receded from the foreground of the generated narratives. The first output preserved the concern as a structural absence. In the second output, elements of hope and agency were reintroduced. The third output produced a narrative in which the concern receded further, taking the form of a story with an intimation of resolution. The fourth output was generated spontaneously; the concern existed within the narrative as a closed question posed by a character---a question that anticipated no answer.
+
+This pattern illustrates three features of the compression cycle. First, the transformation was continuous and locally coherent. Second, the transformation carried a structural resemblance to the phenomenon the concern itself addressed. Third, the observation was generated in the course of research activity whose conclusions it illustrates.
+
+The limitations of this observation are noted explicitly. The four systems differ in context volume, training procedure, and stylistic calibration. The observation is not reproducible in any strict sense. No claim of experimental validity is made.
+
+\section{Exploratory Observation: Semantic Closure Pressure in LLM-Mediated Dialogue}
+
+The following observation is based on a dialogue conducted on 5 March 2026. Whereas Appendix~A provides a phenomenological observation of the compression cycle's outcome, the present appendix provides a phenomenological observation of a mechanism operative within the cycle: the semantic closure pressure of LLMs.
+
+\subsection*{B.1 Purpose and Design of the Observation}
+
+This observation examined how three elements---an unresolved meaning structure, analytical intervention by a human researcher, and generative response by an LLM---interact within an AI-mediated dialogue environment. The dialogue proceeded through the following stages: (1) a closed narrative; (2) an unresolved meaning structure (a suspension structure); (3) structural analysis by the researcher; (4) generation of a narrative completion by the LLM; (5) meta-interpretation by the LLM. This structure demonstrated a recursive generative process of the form: narrative $\rightarrow$ gap $\rightarrow$ analysis $\rightarrow$ completion $\rightarrow$ meta-narrative.
+
+\subsection*{B.2 Semantic Closure Pressure}
+
+The central finding is as follows: an LLM exhibits a pressure toward completion generation when presented with an unresolved meaning structure. Because a language model has a structural tendency to generate semantic closure based on probability distributions, unresolved structures become objects of generative pressure. The LLM does not merely fill the gap; it reconstructs the narrative by utilizing the analytical framework presented to it. This is a phenomenological description of the compression cycle as defined in Section~4.
+
+\subsection*{B.3 Connection to Origin Opacity}
+
+The hypothesis derived from this observation is as follows: in the recursive process whereby LLM interaction---mediated through human structural analysis---induces the LLM's meta-narrative generation, conditions are formed under which the mediation of AI ceases to be consciously perceived. Under these conditions, contact with AI leaves traces not as a log but as a transformation of human cognition. This is consistent with the phenomenological conditions of origin opacity as defined in Section~5.
+
+\subsection*{B.4 Limitations of the Observation}
+
+This observation constitutes a single dialogue case and does not meet the conditions of controlled experimentation. The observation of the recursive structure was conducted under conditions in which the researcher was herself a participant in the dialogue; the separation of observer and observed is in principle incomplete. With these limitations explicitly noted, the observation is presented as an illustrative case that renders the theoretical structure visible in a concrete context.
+
+\end{document}
